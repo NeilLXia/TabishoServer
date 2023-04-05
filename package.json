@@ -1,0 +1,35 @@
+{
+  "name": "atelier-questions-answers-api",
+  "description": "questions and answers api for retail web-portal",
+  "version": "1.0.0",
+  "scripts": {
+    "seedDB": "PGPASSWORD=postgres psql -U postgres -f ./server/database/databaseSchema.sql && node ./server/database/scripts/seedDatabases.ts",
+    "build": "npx nodemon"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "eslint-cli": "^1.1.1",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-airbnb-typescript": "^17.0.0",
+    "eslint-import-resolver-typescript": "^3.5.4",
+    "eslint-plugin": "^1.0.1",
+    "eslint-watch": "^8.0.0",
+    "express": "^4.18.2",
+    "pg": "^8.10.0"
+  },
+  "devDependencies": {
+    "@types/node": "^18.15.11",
+    "@typescript-eslint/eslint-plugin": "^5.57.1",
+    "eslint": "^8.37.0",
+    "eslint-config-standard-with-typescript": "^34.0.1",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-n": "^15.7.0",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-plugin-react": "^7.32.2",
+    "nodemon": "^2.0.22",
+    "pg-copy-streams": "^6.0.5",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.3"
+  }
+}
