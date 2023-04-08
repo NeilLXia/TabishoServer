@@ -5,6 +5,7 @@
         "node": true
     },
     "extends": [
+        "airbnb-base",
         "plugin:react/recommended",
         "standard-with-typescript"
     ],
