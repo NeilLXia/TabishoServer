@@ -13,8 +13,8 @@ asker_email VARCHAR(320),
 question_reported BOOLEAN,
 question_helpfulness INT);
 
-CREATE INDEX questions_id_index
-ON Questions (question_id, product_id);
+CREATE INDEX questionsindex
+ON Questions (product_id);
 
 CREATE TABLE IF NOT EXISTS Answers (
 answer_id INT PRIMARY KEY,
@@ -30,8 +30,8 @@ CONSTRAINT fk_question
   REFERENCES Questions(question_id)
 );
 
-CREATE INDEX answers_id_index
-ON Answers (answer_id, question_id);
+CREATE INDEX answersindex
+ON Answers (question_id);
 
 CREATE TABLE IF NOT EXISTS AnswerPhotos (
 photo_id INT PRIMARY KEY,
@@ -42,5 +42,5 @@ CONSTRAINT fk_answer
   REFERENCES Answers(answer_id)
 );
 
-CREATE INDEX answerphotos_id_index
-ON AnswerPhotos (photo_id, answer_id);
+CREATE INDEX apindex
+ON AnswerPhotos (answer_id);

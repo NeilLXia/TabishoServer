@@ -1,11 +1,13 @@
 import model from "../model"
 
 export default {
-  getQuestions: (req, res) => {
-    model.getQuestions(req.query.product_id, req.query.page, req.query.count)
-    .then((queryData) => JSON.stringify(queryData))
-    .then((data) => res.status(200).send(data))
-    .catch((err) => res.status(400).send(err))
+  getQuestions: async (req, res) => {
+    try {
+      const queryData = await model.getQuestions(req.query.product_id, req.query.page, req.query.count)
+      res.status(200).send(JSON.stringify(queryData))
+    } catch (err) {
+      res.status(400).send(err)
+    }
   },
   postQuestion: (req, res) => {
     const { product_id, body, name, email } = req.body

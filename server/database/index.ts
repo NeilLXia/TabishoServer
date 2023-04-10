@@ -1,5 +1,6 @@
 require('dotenv').config()
 const { Pool } = require('pg')
+// const pgp = require('pg-promise')();
 
 const client = new Pool({
   host: process.env.DB_HOST,
@@ -9,6 +10,9 @@ const client = new Pool({
   password: process.env.PASSWORD
 })
 
-client.connect()
+// const client = pgPromise({
+//   connectionString: process.env.PRODUCTS_DATABASE_URL,
+// });
 
 export default client
+
