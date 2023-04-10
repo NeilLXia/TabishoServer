@@ -5,22 +5,6 @@ export default {
     const offset = (page - 1) * count
     try {
       const result = await client.query(
-        // `SELECT json_build_object(
-        //   'product_id', ${productId},
-        //   'results', (SELECT json_agg(json_build_object(
-        //     'question_id', q.question_id,
-        //     'question_body', q.question_body,
-        //     'question_date', q.question_date,
-        //     'asker_name', q.asker_name,
-        //     'asker_email', q.asker_email,
-        //     'question_reported', q.question_reported,
-        //     'question_helpfulness', q.question_helpfulness
-        //   ))
-        //   FROM Questions q
-        //   WHERE product_id = ${productId})
-        // );`
-        // )
-        // return result.rows
         `SELECT Questions.*,
         (
           SELECT jsonb_agg(nested_answer)
