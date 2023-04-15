@@ -76,11 +76,11 @@ The following are example results for AWS hosted servers/databases using 2 serve
 At 900 req/s for 1 minute with no initial cached data:
 
 <img src="./readme-assets/loaderio test results 1.png" alt= “loader_test_results” width="600">
-<br/><br/>
+<br/>
 
 At 3000 req/s for 1 minute with some cached data:
 
-<img src="./readme-assets/loaderio test results 1.png" alt= “loader_test_results” width="600">
+<img src="./readme-assets/loaderio test results 2.png" alt= “loader_test_results” width="600">
 <br/><br/>
 
 ## Scalability
