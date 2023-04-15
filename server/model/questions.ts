@@ -4,6 +4,7 @@ export default {
   getQuestions: async (productId, page = 1, count = 5) => {
     const offset = (page - 1) * count
     try {
+      console.timeLog("getQTime");
       const result = await client.query(
         `SELECT Questions.*,
         (

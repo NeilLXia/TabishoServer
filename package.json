@@ -7,7 +7,7 @@
     "seedDB": "npx ts-node ./server/database/scripts/seedDatabases.ts",
     "build": "npx nodemon",
     "test": "jest --coverage --detectOpenHandles --forceExit",
-    "k6test": "k6 run --out cloud --duration 10s --vus 50 ./server/testing/k6/k6.test.ts"
+    "k6test": "k6 run --out cloud ./server/testing/k6/k6.test.ts"
   },
   "dependencies": {
     "cors": "^2.8.5",
