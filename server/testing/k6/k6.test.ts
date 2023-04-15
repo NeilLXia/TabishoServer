@@ -10,13 +10,9 @@ export let options = {
   },
   vus: 50,
   duration: '30s',
-  // stages: [
-  //   { target: 50, duration: '1m' },
-  // ],
 }
 
 export default function () {
-  const product_id = Math.round(Math.random() * 400) + 563871
-  // const response = http.get(`http://localhost:5430/qa/questions?product_id=${product_id}`);
-  const response = http.get(`http://3.17.208.214/qa/questions/?product_id=${product_id}`);
+  const product_id = Math.round(Math.random() * 100000) + 563871
+  const response = http.get(`http://localhost:${process.env.SERVER_PORT}/qa/questions?product_id=${product_id}`);
 }
