@@ -1,7 +1,7 @@
-import answer from "./answers";
-import question from "./questions";
+import events from "./events";
+import trips from "./trips";
 
 export default {
-  ...answer,
-  ...question,
-}
+  ...events,
+  ...trips,
+};

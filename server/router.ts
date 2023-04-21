@@ -1,14 +1,15 @@
 const router = require("express").Router();
 import controller from "./controller";
 
-router.get("/questions/", controller.getQuestions)
-router.post("/questions/", controller.postQuestion)
-router.put("/questions/:question_id/helpful/", controller.putQuestionHelpful)
-router.put("/questions/:question_id/report/", controller.putQuestionReported)
+router.get("/events/", controller.getEvents);
+router.post("/events/", controller.postEvent);
+router.put("/events/:event_id", controller.putEventUpdates);
+router.put("/events/:event_id/attending", controller.putEventAttending);
 
-router.get("/questions/:question_id/answers/", controller.getAnswers)
-router.post("/questions/:question_id/answers", controller.postAnswer)
-router.put("/answers/:answer_id/helpful", controller.putAnswerHelpful)
-router.put("/answers/:answer_id/report", controller.putAnswerReported)
+router.get("/trips/", controller.getTrips);
+router.post("/trips/", controller.postTrip);
+router.put("/trips/:trip_id", controller.putTripUpdates);
+router.post("/trips/:trip_id/housing", controller.postHousing);
+router.put("/trips/:trip_id/attending", controller.putTripAttending);
 
-module.exports = router
+module.exports = router;

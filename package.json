@@ -1,6 +1,6 @@
 {
-  "name": "atelier-questions-answers-api",
-  "description": "questions and answers api for retail web-portal",
+  "name": "tabisho-api",
+  "description": "tabisho api",
   "version": "1.0.0",
   "scripts": {
     "resetDB": "PGPASSWORD=postgres psql -U postgres -f ./server/database/databaseSchema.sql",
@@ -22,7 +22,8 @@
     "express": "^4.18.2",
     "path": "^0.12.7",
     "pg": "^8.10.0",
-    "pg-promise": "^11.4.3"
+    "pg-promise": "^11.4.3",
+    "sql-escape-string": "^1.1.0"
   },
   "devDependencies": {
     "@types/jest": "^29.5.0",
